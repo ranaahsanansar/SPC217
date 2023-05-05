@@ -12,8 +12,9 @@ import {
   Typography,
   Container
 } from "@mui/material";
+import './propertiesDetails.css'
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 import HourglassBottomRoundedIcon from "@mui/icons-material/HourglassBottomRounded";
@@ -27,16 +28,48 @@ import { propertiesImageData } from "../data";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import CloseIcon from '@mui/icons-material/Close';
+
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
+    srcSet: `${image}?w=${size * cols}&h=${size * rows
+      }&fit=crop&auto=format&dpr=2 2x`,
   };
 }
 
 const PropertiesDetails = () => {
+ 
+  // Image Sliders 
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [open, setOpen] = useState(true);
+
+
+  const handleOpen = (i) => {
+    setSlideNumber(i);
+    setOpen(true);
+  };
+
+  const handleMove = (direction) => {
+    let newSlideNumber;
+
+    if (direction === "l") {
+      newSlideNumber = slideNumber === 0 ? propertiesImageData.length-1 : slideNumber - 1;
+      // console.log(propertiesImageData.length)
+      // console.log(newSlideNumber)
+    } else {
+      newSlideNumber = slideNumber === propertiesImageData.length-1 ? 0 : slideNumber + 1;
+      // console.log(propertiesImageData.length)
+      // console.log(newSlideNumber)
+
+    }
+
+    setSlideNumber(newSlideNumber)
+  };
+
+
   function TabPanel(props) {
     const { children, value, index } = props;
     return <>{value === index && <>{children}</>}</>;
@@ -110,6 +143,35 @@ const PropertiesDetails = () => {
           </Typography>
         </Box>
 
+        {open && (
+          <div className="slider" key={slideNumber}  >
+            {/* <FontAwesomeIcon
+              icon={CloseIcon}
+              className="close"
+              onClick={() => setOpen(false)}
+            /> */}
+            <CloseIcon className="close"
+              onClick={() => setOpen(false)} />
+            {/* <FontAwesomeIcon
+              icon={ArrowBackIosNewIcon}
+              className="arrow"
+              onClick={() => handleMove("l")}
+            /> */}
+            <ArrowBackIosNewIcon sx={{ left: "10px" }}  className="arrow"
+              onClick={() => handleMove("l")}/>
+            <div className="sliderWrapper">
+              <img key={slideNumber}  src={propertiesImageData[slideNumber].img} alt="" className="sliderImg" />
+            </div>
+            {/* <FontAwesomeIcon
+              icon={ArrowForwardIosIcon}
+              className="arrow"
+              onClick={() => handleMove("r")}
+            /> */}
+            <ArrowForwardIosIcon sx={{ right: "10px" }} className="arrow"
+              onClick={() => handleMove("r")}/>
+          </div>
+        )}
+
         <Box mb={4}>
           <Box position="relative">
             <Box
@@ -125,33 +187,43 @@ const PropertiesDetails = () => {
                 color="whitesmoke"
                 padding={1}
                 variant="subtitle1"
+                onClick={()=>{
+                  setOpen(!open)
+                }}
+                sx={{ cursor: 'pointer' }}
               >
                 Show all Images
               </Typography>
             </Box>
             <Box border='2px solid gray' >
               <ImageList
-              // sx={{ height: 450 }}
-              variant='standard'
-              cols={4}
-              rowHeight={200}
-            >
-              {propertiesImageData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                  cols={item.cols || 1}
-                  rows={item.rows || 1}
-                >
-                  <img
-                    {...srcset(item.img, 121, item.rows, item.cols)}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
+                // sx={{ height: 450 }}
+                variant='standard'
+                cols={4}
+                rowHeight={200}
+              >
+                {propertiesImageData.map((item , index) => {
+                  if(index < 3 ){
+                    return(
+                    <ImageListItem
+                      key={item.img}
+                      cols={item.cols || 1}
+                      rows={item.rows || 1}
+                    >
+                      
+                      <img
+                        {...srcset(item.img, 121, item.rows, item.cols)}
+                        alt={item.title}
+                        loading="lazy"
+                      />
+                    </ImageListItem>
+                  )
+                  }
+                  
+                })}
+              </ImageList>
             </Box>
-            
+
           </Box>
         </Box>
 
@@ -178,11 +250,21 @@ const PropertiesDetails = () => {
                     Description
                   </Typography>
                   <Typography>
-                    1 Kanal double story house, Ideal location new garden town, 5 bed rooms, 4 bath rooms, 3 kitchens.
+                    Located a 5-minute walk from Al rehman garden gate 2, Tower
+                    Street Apartments has accommodations with air conditioning and
+                    free WiFi. The units come with hardwood floors and feature a
+                    fully equipped kitchenette with a microwave, a flat-screen TV,
+                    and a private bathroom with shower and a hairdryer. A fridge is
+                    also offered, as well as an electric tea pot and a coffee
+                    machine. Popular points of interest near the apartment include
+                    Cloth Hall, Main Market Square and Town Hall Tower. The nearest
+                    airport is John Paul II International Kraków–Balice, 16.1 km
+                    from Tower Street Apartments, and the property offers a paid
+                    airport shuttle service.
                   </Typography>
                 </Box>
 
-              
+
               </Stack>
             </Grid>
 
@@ -208,11 +290,11 @@ const PropertiesDetails = () => {
                           color: "black",
                         }}
                       >
-                      per share
+                        per share
                       </span>
                     </Box>
                     <Typography variant="body2" color="white">
-                      Property is already approved and listed on blockchain. Per sheare price is 20,000. Price is negotiable. 
+                      Property is already approved and listed on blockchain. Per sheare price is 20,000. Price is negotiable.
                     </Typography>
 
                     <Box display="flex">
@@ -273,14 +355,14 @@ const PropertiesDetails = () => {
             <Typography fontWeight="bold">Rana Ahsan Ansar</Typography>
             <span>Contact Inforamtion: </span>
             <Box display="flex">
-              <EmailIcon   />
+              <EmailIcon />
 
               <Typography ml={1} fontWeight="bold">asn.cs21@gmail.com</Typography>
             </Box>
             <Box display="flex">
               <LocalPhoneIcon />
 
-              <Typography ml={1}  fontWeight="bold">+92 3091045145</Typography>
+              <Typography ml={1} fontWeight="bold">+92 3091045145</Typography>
             </Box>
           </Stack>
         </Box>
@@ -298,7 +380,7 @@ const PropertiesDetails = () => {
             onChange={handleTabs}
             variant="scrollable"
             scrollButtons={false}
-            textColor="white"
+            textColor="primary"
             TabIndicatorProps={{
               style: {
                 backgroundImage: "linear-gradient(to left, #5514B4, #9d149d)",
@@ -317,7 +399,7 @@ const PropertiesDetails = () => {
 
           <TabPanel value={value} index={0}>
             <Box mt={2}>
-              <ShresDetailsTable
+              <ShresDetailsTable key="shearHolders"
                 columsArray={sharesTableColumns}
                 rowsArray={sharesTableRows}
               />
@@ -325,7 +407,7 @@ const PropertiesDetails = () => {
           </TabPanel>
           <TabPanel value={value} index={1}>
             <Box mt={2}>
-              <ShresDetailsTable
+              <ShresDetailsTable key="transaction"
                 columsArray={historyTableColumns}
                 rowsArray={historyTableRows}
               />

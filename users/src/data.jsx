@@ -18,6 +18,16 @@ export const propertiesImageData = [
       title: "Coffee",
       cols: 2,
     },
+    {
+      img: "https://images.pexels.com/photos/15622647/pexels-photo-15622647.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Coffee",
+      cols: 2,
+    },
+    {
+      img: "https://images.pexels.com/photos/15622647/pexels-photo-15622647.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      title: "Coffee",
+      cols: 2,
+    },
   ];
 
 export const cardData = [
