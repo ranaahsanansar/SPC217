@@ -130,7 +130,7 @@ const SellProperty = () => {
                   <Typography fontWeight="bold">
                     How to Sell property through Blockchain
                   </Typography>
-                  <ul>
+                  <ul style={{ listStyle: "none" }} >
                     <li>Contact to the owner.</li>
                     <li>Decide the price of property per share.</li>
                     <li>Take request number from the owner.</li>
