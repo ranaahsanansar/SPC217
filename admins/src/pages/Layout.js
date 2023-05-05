@@ -59,7 +59,9 @@ const Layout = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item lg={10} md={10} sm={10} sx={{ height: '100%' , overflowY: 'scroll' , backgroundColor:'#353839' , }}>
+        <Grid item lg={10} md={10} sm={10} sx={{ height: '100%' , overflowY: 'scroll' , backgroundColor:'#353839' , '&::-webkit-scrollbar': {
+          display: "none"
+      } }}>
           <Outlet /> 
         </Grid>
       </Grid>
