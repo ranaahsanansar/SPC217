@@ -40,7 +40,7 @@ const WeOfferSection = () => {
         <Box height="100%" display="flex" alignItems="center" paddingY={3}>
           <Box width="100%">
             <Box marginBottom={5}>
-              <Typography variant="h3">We Offer</Typography>
+              <Typography fontSize="32px" fontWeight='bold'>We Offer</Typography>
             </Box>
 
             <Grid container spacing={2} alignItems='start' >

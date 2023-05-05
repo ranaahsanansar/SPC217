@@ -52,13 +52,14 @@ const Filter = () => {
   return (
     <>
       <Container>
-        <Box marginY={4}>
+        <Box mb={2} >
+          <Box marginY={4}>
           <Typography sx={gradiantText} variant="h5" fontWeight="bold">
             Discover Properties
           </Typography>
         </Box>
 
-        <Box>
+        <Box >
           <Grid
             container
             spacing={2}
@@ -71,7 +72,7 @@ const Filter = () => {
           >
             {/* Left Grid  */}
             <Grid item xs={12} sm={8} md={8} lg={8}>
-              <Box height="100vh" pt={1} >
+              <Box pt={1}>
 
 
                 <Box
@@ -198,6 +199,8 @@ const Filter = () => {
             </Grid>
           </Grid>
         </Box>
+        </Box>
+        
       </Container>
     </>
   );

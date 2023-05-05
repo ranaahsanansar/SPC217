@@ -29,14 +29,11 @@ const HeroSection = () => {
             <Grid item  xs={12} md={6} lg={6}>
             <Box padding={2} borderRadius={5} sx={glassMorphismStyle}>
               <Stack spacing={2}>
-                <Typography variant="h2" fontWeight={500}>
-                  Digitalizing Real Estate
+                <Typography fontSize="32px" fontWeight='bold'>
+                Pakistan's First Block-chain Powered Real-Estate Marketplace.
                 </Typography>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-                  eos magnam amet quod laudantium nihil molestias accusamus
-                  quisquam quasi fugit voluptas cum consequatur eveniet libero
-                  hic eius, sunt maiores dolorem!
+                <Typography fontSize='22px' >
+                Our innovative digital platform leverages the power of blockchain technology to provide a secure, transparent, and efficient way to buy and sell properties in Pakistan. Find the property of your dreams and close the deal without any intermediaries.
                 </Typography>
                 <Stack direction="row" spacing={3}>
                 <NavLink to='/login' style={{ textDecoration: 'none' }}>

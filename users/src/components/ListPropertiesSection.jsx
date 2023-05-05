@@ -63,7 +63,7 @@ const ListPropertiesSection = () => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Typography variant="h3">Listed Properties</Typography>
+              <Typography fontSize="32px" fontWeight='bold'>Listed Properties</Typography>
               <Typography fontSize={18} fontWeight="bold">
                 <a href="#">See All</a>
               </Typography>

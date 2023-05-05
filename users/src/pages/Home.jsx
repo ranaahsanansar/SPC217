@@ -46,7 +46,7 @@ const Home = () => {
           <Box height="100%" display="flex" alignItems="center" paddingY={3}>
             <Box width="100%">
               <Box marginBottom={5}>
-                <Typography variant="h3">How it works</Typography>
+                <Typography fontSize="32px" fontWeight='bold'>How it works</Typography>
               </Box>
 
               <Grid container spacing={2} alignItems='start'  >
@@ -81,10 +81,7 @@ const Home = () => {
                           WebkitLineClamp: 6,
                         }}
                       >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Harum, odio. Facilis placeat obcaecati repellendus est
-                        unde voluptatem velit harum officia dolores recusandae.
-                        Ipsum, pariatur? Modi cumque est quo quia facere?
+                        To get started, you'll need to connect your digital wallet to our platform. This is a simple and secure process that allows you to interact with our smart contracts and participate in real estate transactions.
                       </Typography>{" "}
                     </Box>
                   </Stack>
@@ -113,7 +110,6 @@ const Home = () => {
                       </Typography>{" "}
                     </Box>
                     <Box>
-                      {" "}
                       <Typography
                         sx={{
                           display: "-webkit-box",
@@ -122,11 +118,8 @@ const Home = () => {
                           WebkitLineClamp: 6,
                         }}
                       >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Harum, odio. Facilis placeat obcaecati repellendus est
-                        unde voluptatem velit harum officia dolores recusandae.
-                        Ipsum, pariatur? Modi cumque est quo quia facere?
-                      </Typography>{" "}
+                        To ensure the highest level of security and transparency, we require all users to complete a KYC (Know Your Customer) process before buying or selling properties on our platform. This helps us verify your identity and ensure that you are a legitimate user.
+                      </Typography>
                     </Box>
                   </Stack>
                 </Box>
@@ -150,7 +143,7 @@ const Home = () => {
                     <Box>
                       {" "}
                       <Typography variant="h6" fontWeight="bold">
-                        Sell Properties with smart Contract
+                        Sell with smart Contract
                       </Typography>{" "}
                     </Box>
                     <Box>
@@ -163,10 +156,7 @@ const Home = () => {
                           WebkitLineClamp: 6,
                         }}
                       >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Harum, odio. Facilis placeat obcaecati repellendus est
-                        unde voluptatem velit harum officia dolores recusandae.
-                        Ipsum, pariatur? Modi cumque est quo quia facere?
+                        Our smart contracts enhance security and efficiency in real estate transactions. They enable seamless transfer of property ownership and eliminate the need for intermediaries. Experience the future of real estate transactions with us.
                       </Typography>{" "}
                     </Box>
                   </Stack>

@@ -178,28 +178,11 @@ const PropertiesDetails = () => {
                     Description
                   </Typography>
                   <Typography>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Laboriosam animi numquam provident voluptatem id esse enim
-                    dolorum recusandae, cum amet, quis similique a placeat
-                    itaque doloremque dolor cupiditate aut aperiam?
+                    1 Kanal double story house, Ideal location new garden town, 5 bed rooms, 4 bath rooms, 3 kitchens.
                   </Typography>
                 </Box>
 
-                <Box>
-                  <Typography sx={gradiantText} variant="h6" fontWeight="bold">
-                    Features
-                  </Typography>
-                  <Box>
-                    <ul style={{ marginLeft: 30 }}>
-                      <li>1st Portion</li>
-                      <li>1st Portion</li>
-                      <li>1st Portion</li>
-                      <li>1st Portion</li>
-                      <li>1st Portion</li>
-                      <li>1st Portion</li>
-                    </ul>
-                  </Box>
-                </Box>
+              
               </Stack>
             </Grid>
 
@@ -216,7 +199,7 @@ const PropertiesDetails = () => {
                     <Box display="flex" alignItems="center">
                       <MonetizationOnRoundedIcon />
                       <Typography fontWeight="bold" mr={1} variant="h6">
-                        4
+                        20,000
                       </Typography>
                       <span
                         style={{
@@ -229,13 +212,16 @@ const PropertiesDetails = () => {
                       </span>
                     </Box>
                     <Typography variant="body2" color="white">
-                      Apartment complex located in Gulderg Palza on 8th floor,
-                      apartment number 293D
+                      Property is already approved and listed on blockchain. Per sheare price is 20,000. Price is negotiable. 
                     </Typography>
 
                     <Box display="flex">
                       <Typography mr={1}>Shares: </Typography>
-                      <Typography fontWeight="bold">20</Typography>
+                      <Typography fontWeight="bold">40</Typography>
+                    </Box>
+                    <Box display="flex">
+                      <Typography mr={1}>Total: </Typography>
+                      <Typography fontWeight="bold">800,000</Typography>
                     </Box>
 
                     {/* <Button
@@ -273,10 +259,7 @@ const PropertiesDetails = () => {
               293 4th Floor, Gulberg Plaza,Lahore Pakistan
             </Typography>
             <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              aspernatur animi. Impedit voluptate architecto tenetur voluptas
-              praesentium, dolorum atque repellat magni eos quae iste minima,
-              ullam in illum est beatae?
+              House no.2, Street no. 12, New garden town near Himayat-e-Islam Collage, band road, Lahore.
             </Typography>
           </Stack>
         </Box>
@@ -365,7 +348,7 @@ const PropertiesDetails = () => {
           <Box mt={2}>
             <ShresDetailsTable
               columsArray={sharesTableColumns}
-              rowsArray={sharesTableRows}
+              rowsArray={sharesTableRows} 
             />
           </Box>
         </Box> */}

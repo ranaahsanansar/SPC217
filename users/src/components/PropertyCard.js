@@ -18,10 +18,20 @@ export default function ImgMediaCard(props) {
         image={props.data.image}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography sx={{
+        display: '-webkit-box',
+        overflow: 'hidden',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: 1,
+    }} gutterBottom variant="h5" component="div">
           {props.data.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{
+        display: '-webkit-box',
+        overflow: 'hidden',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: 2,
+    }} >
           {props.data.des}
         </Typography>
       </CardContent>

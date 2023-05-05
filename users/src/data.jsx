@@ -24,9 +24,9 @@ export const cardData = [
   {
     id: 1,
     img: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Apertment Complex",
+    title: "5 Marla Appartment",
     loc: "29-A 4th Floor Gulberg Plaza",
-    prize: "4",
+    prize: "20,000",
     body: "Two bedrooms with attached bath, One kitchen, drawing room, Tv lounge and dining table with more things"
     
   },
@@ -53,64 +53,7 @@ export const cardData = [
     
   },
   
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Awan Town house",
-    loc: "House number 2, Street Number 12, Awan Town",
-    prize: "100",
-    body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rerum aliquid natus! Consequuntur sit odio dolorem illo eveniet dicta animi, saepe accusamus repellendus. Quisquam id debitis iste adipisci assumenda impedit."
-    
-  },
   
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Awan Town house",
-    loc: "House number 2, Street Number 12, Awan Town",
-    prize: "100",
-    body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rerum aliquid natus! Consequuntur sit odio dolorem illo eveniet dicta animi, saepe accusamus repellendus. Quisquam id debitis iste adipisci assumenda impedit."
-    
-  },
   
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Awan Town house",
-    loc: "House number 2, Street Number 12, Awan Town",
-    prize: "100",
-    body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rerum aliquid natus! Consequuntur sit odio dolorem illo eveniet dicta animi, saepe accusamus repellendus. Quisquam id debitis iste adipisci assumenda impedit."
-    
-  },
-  
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Awan Town house",
-    loc: "House number 2, Street Number 12, Awan Town",
-    prize: "100",
-    body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rerum aliquid natus! Consequuntur sit odio dolorem illo eveniet dicta animi, saepe accusamus repellendus. Quisquam id debitis iste adipisci assumenda impedit."
-    
-  },
-  
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Awan Town house",
-    loc: "House number 2, Street Number 12, Awan Town",
-    prize: "100",
-    body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rerum aliquid natus! Consequuntur sit odio dolorem illo eveniet dicta animi, saepe accusamus repellendus. Quisquam id debitis iste adipisci assumenda impedit."
-    
-  },
-  
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=400",
-    title: "Awan Town house",
-    loc: "House number 2, Street Number 12, Awan Town",
-    prize: "100",
-    body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rerum aliquid natus! Consequuntur sit odio dolorem illo eveniet dicta animi, saepe accusamus repellendus. Quisquam id debitis iste adipisci assumenda impedit."
-    
-  },
   
   ]
