@@ -9,7 +9,7 @@ import {
     MenuItem,
     Select,
     Stack,
-    TextField,
+    TextField, 
     Typography,
     Alert
   } from "@mui/material";
@@ -182,10 +182,19 @@ const PropertyStayForm = () => {
                     <Button
                       type="submit"
                       variant="contained"
+                      sx={{ mt: 3, mb: 2, px: 5 , mr: 2}}
+                      onClick={handleSubmit}
+                      color="error"
+                    >
+                      Stay
+                    </Button>
+                    <Button
+                      type="submit"
+                      variant="contained"
                       sx={{ mt: 3, mb: 2, px: 5 }}
                       onClick={handleSubmit}
                     >
-                      Submit
+                      Remove Stay
                     </Button>
                   </Box>
 
