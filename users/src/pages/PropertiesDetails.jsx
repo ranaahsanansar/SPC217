@@ -203,7 +203,7 @@ const PropertiesDetails = () => {
                 rowHeight={200}
               >
                 {propertiesImageData.map((item , index) => {
-                  if(index < 3 ){
+                  if(index < 4 ){
                     return(
                     <ImageListItem
                       key={item.img}
