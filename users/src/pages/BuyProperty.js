@@ -27,7 +27,7 @@ const BuyProperty = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const actualData = {
+    const actualData = { 
       province: data.get('province'),
       distric: data.get('distric'),
       society: data.get('society'),

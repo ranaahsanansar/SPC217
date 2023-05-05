@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Divider,
   Grid,
@@ -11,6 +12,7 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddress } from "../features/connectWallet";
 import { setIsConnected } from "../features/profileSlice";
+import { NavLink } from "react-router-dom";
 
 const Profile = () => {
 
@@ -192,8 +194,11 @@ const Profile = () => {
                           fontWeight="bold"
                           fontSize="large"
                           color='green'
+                          component={NavLink} to='/dashboard/approvalRequest' 
                         >
                           Approved
+                          
+                          
                         </Typography>
                         ) : (
                           <Typography variant="h3"

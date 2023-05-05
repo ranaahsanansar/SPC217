@@ -44,7 +44,7 @@ const PropertiesDetails = () => {
  
   // Image Sliders 
   const [slideNumber, setSlideNumber] = useState(0);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
 
   const handleOpen = (i) => {

@@ -17,6 +17,7 @@ import ChangePassword from "./pages/auth/ChangePassword";
 import Filter from "./pages/Filter";
 import PropertiesDetails from "./pages/PropertiesDetails";
 import UpdateProperty from "./pages/UpdateProperty";
+import ApprovalRequestForm from "./components/ApprovalRequestForm";
 
 
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="sellPropertyBlockchain" element={token ? <SellProperty /> : <Navigate to="/login" />} />
             <Route path="changePassword" element={token ? <ChangePassword /> : <Navigate to="/login" />} />
             <Route path="updateProperty" element={token ? <UpdateProperty /> : <Navigate to="/login" />} />
+            <Route path="approvalRequest" element={token ? <ApprovalRequestForm /> : <Navigate to="/login" />} />
 
           <Route path="test" element={ <UpdateProperty /> } />
 
@@ -54,5 +56,7 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;
